@@ -43,7 +43,7 @@ Created: June 5, 2026 10:52 AM
    - Gateway → (redacted) the router IP
    - DNS Server → (redacted) same as the gateway
 
-![image.png](/images/mage%202.png)
+![image.png](/images/image%202.png)
 
 1. The system will now install and then boot in the ProxmoxVE server
 2. I encountered a boot loop issue here and you can solve this by pressing any button to cancel the boot loop and then it will prompt you options, click on “continue to boot”, so it automatically boots to the CLI always.
