@@ -30,11 +30,11 @@ Created: June 5, 2026 10:52 AM
 
 1. It will prompt you for the target harddisk, ensure that you select the SSD for optimal performance of the server and ext4 as the fs for this server. _Selecting the HDD will cause slower performance._
 
-![image.png](image.png)
+![image.png](/images/image.png)
 
 1. Admin password and email. Set this as you like but ensure to put in an actual email ID and not a fake one.
 
-![image.png](image%201.png)
+![image.png](/images/image%201.png)
 
 1. mgmt interface is nic0 for me which is the ethernet, this ensures that after installation, I have instant access to internet so I can setup the server properly. If you have a wireless NIC, this won’t work out of the box and would need internet connection to setup the dependencies.
    - management interface → nic0: ethernet
@@ -43,13 +43,13 @@ Created: June 5, 2026 10:52 AM
    - Gateway → (redacted) the router IP
    - DNS Server → (redacted) same as the gateway
 
-![image.png](image%202.png)
+![image.png](/images/mage%202.png)
 
 1. The system will now install and then boot in the ProxmoxVE server
 2. I encountered a boot loop issue here and you can solve this by pressing any button to cancel the boot loop and then it will prompt you options, click on “continue to boot”, so it automatically boots to the CLI always.
 3. The proxmox server can now be accessed using the IP of the machine
 
-![image.png](proxmoxaccess.png)
+![image.png](/images/proxmoxaccess.png)
 
 ## Proxmox VPN Remote Access Setup
 
@@ -75,32 +75,32 @@ tailscale up
 
 5. When away from the local network, you can access the Server safely by connecting to the VPN and utilizing the private IP address it provides.
 
-![image.png](tailscale.png)
+![image.png](/images/tailscale.png)
 
 ## 1TB HDD Partition Drive Setup
 
 1. Go to the main pve-server node
 
-![image.png](image%203.png)
+![image.png](/images/image%203.png)
 
 1. Under Disks > LVM-Thin, click on Create: Thinpool. It will says no disks unused for me because I have already attached the HDD previously, but if you haven’t, you will see your HDD and its storage space available.
    1. The HDD storage will now be successfully initialized as a storage space as seen in the screenshot.
 
-![image.png](image%204.png)
+![image.png](/images/image%204.png)
 
 ## Attaching Formatted 1TB HDD to VM
 
 1. In the Ubuntu node, under hardware tab, select add.
 
-![image.png](image%205.png)
+![image.png](/images/image%205.png)
 
 1. Add hard disk, select the storage (for me it is hdd-storage-thin).
 
-![image.png](image%206.png)
+![image.png](/images/image%206.png)
 
 1. Under Disk Size (GiB), specify desired storage space, select discard and IO thread to optimize data flow to physical HDD.
 
-![image.png](image%207.png)
+![image.png](/images/image%207.png)
 
 1. Start VM, and check lsblk to verify attached HDD (shown in screenshot below)
 
@@ -294,4 +294,4 @@ sudo docker ps //to verify it's running
 
 1. Now I can access Nextcloud Web UI from my Tailscale DNS or if at home the IP of the server with port 11010 (this is with already set up account).
 
-![image.png](image%208.png)
+![image.png](/images/image%208.png)

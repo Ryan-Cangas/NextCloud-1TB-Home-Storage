@@ -2,7 +2,7 @@
 
 ### _A Bare-Metal Virtualized Private Cloud Storage Infrastructure Deployment_
 
-## 📖 [View My Detailed Implementation Notes Diary] (NextCloud%201TB%20Home%20Storage.md)
+## 📖 [View My Detailed Implementation Notes Diary](NextCloud%201TB%20Home%20Storage.md)
 
 [![Platform: Proxmox VE](https://img.shields.io/badge/Hypervisor-Proxmox%20VE%208.x-orange?logo=proxmox&logoColor=white)](https://www.proxmox.com)
 [![OS: Ubuntu Server](https://img.shields.io/badge/Guest%20OS-Ubuntu%20Server-E95420?logo=ubuntu&logoColor=white)](https://ubuntu.com)
@@ -23,13 +23,13 @@ As a developing Junior Cloud Engineer, I decided to transform an old gaming PC t
 
 Now I have a Cloud Storage solution for my family that's completely free, self-provisioned and maintained by me! I can provision how much storage everyone in the family can have, take snapshots of their backups and snapshots of the Virtual Machine to ensure high-availability and stress-free usage locally and remotely.
 
-![image.png](cloudusers.png)
+![image.png](/images/cloudusers.png)
 
 ---
 
 ## 🏗️ High-Level Infrastructure Topology
 
-![image.png](HomeCloudStorage_Infrastructure_Topology.png)
+![image.png](/images/HomeCloudStorage_Infrastructure_Topology.png)
 
 ## 🛠️ Technical Skills
 
